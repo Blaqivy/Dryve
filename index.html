@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/eac5280877.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Dryve App</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="bg-black p-4 text-white fixed w-full z-50">
+      <div class="container mx-auto flex items-center justify-between">
+        <div
+          class="text-2xl md:text-3xl lg:text-4xl font-semibold pl-4 md:pl-12"
+        >
+          <p class="cursor-pointer">Dry</p>
+        </div>
+        <div class="md:hidden">
+          <button id="menu-icon" class="text-white focus:outline-none">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <div class="hidden md:flex ml-8 md:ml-96" id="navLinks">
+          <a href="#" class="m-4">Book a Ride</a>
+          <a href="#" class="m-4">Become a Driver</a>
+          <a href="#" class="m-4">Support</a>
+        </div>
+        <button
+          class="hidden md:block bg-white text-black px-6 py-2 mr-8 rounded-xl border hover:bg-black hover:text-white"
+          id="signupButton"
+        >
+          Sign up
+        </button>
+      </div>
+      <!-- Dropdown menu for small screens -->
+      <div class="md:hidden" id="dropdownMenu">
+        <a href="#" class="block py-2 px-4 text-white">Book a Ride</a>
+        <a href="#" class="block py-2 px-4 text-white">Become a Driver</a>
+        <a href="#" class="block py-2 px-4 text-white">Support</a>
+      </div>
+    </nav>
+    <style>
+      @media (max-width: 768px) {
+        #navLinks {
+          display: none;
+        }
+        #signupButton {
+          display: none;
+        }
+      }
+    </style>
+    <!-- Hero Section -->
+    <header>
+      <div
+        class="relative bg-cover bg-no-repeat bg-opacity-80 h-screen w-screen flex justify-center items-center text-white"
+        style="background-image: url('images/dryver2.jpg')"
+      >
+        <div
+          class="absolute inset-0 bg-black opacity-50"
+          aria-hidden="true"
+        ></div>
+        <div
+          class="text-6xl md:text-4xl lg:text-6xl xl:text-7xl font-semibold text-center md:text-left relative"
+        >
+          Get behind the wheel and earn money
+        </div>
+      </div>
+    </header>
+    <!-- Services Section -->
+    <section class="mx-4 md:mx-8 lg:mx-20 my-6 md:my-12">
+      <h2
+        class="text-2xl md:text-4xl lg:text-5xl text-center mb-4 md:mb-8 font-semibold"
+      >
+        About Dryve
+      </h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-8"
+      >
+        <div class="bg-green-800 p-4 md:p-6 rounded-lg">
+          <h3 class="text-lg md:text-xl text-white font-semibold mb-2 md:mb-4">
+            About Us
+          </h3>
+          <p class="text-white text-sm md:text-base">
+            Welcome to Dryve, Nigeria's premier ride-hailing service designed
+            with you in mind. At Dryve, we believe that your journey should be
+            as enjoyable as your destination. Whether you're commuting to work,
+            heading out for a night on the town, or exploring the vibrant
+            streets of Nigeria, Dryve is here to make your ride seamless, safe,
+            and stress-free.
+          </p>
+        </div>
+        <div class="bg-red-700 p-4 md:p-6 rounded-lg">
+          <h3 class="text-lg md:text-xl text-white font-semibold mb-2 md:mb-4">
+            Our Mission
+          </h3>
+          <p class="text-white text-sm md:text-base">
+            At Dryve, our mission is simple: to revolutionize the way you move.
+            We strive to provide a reliable, convenient, and affordable
+            transportation solution for everyone in Nigeria.
+          </p>
+        </div>
+        <div class="bg-green-800 p-4 md:p-6 rounded-lg">
+          <h3 class="text-lg md:text-xl text-white font-semibold mb-2 md:mb-4">
+            Services
+          </h3>
+          <p class="text-white text-sm md:text-base">
+            Dryve offers a range of services tailored to meet your diverse
+            transportation needs. Whether you're looking for a quick ride to
+            your destination, a comfortable and stylish option for a special
+            occasion, or a convenient way to share the journey with others,
+            Dryve has you covered.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Business section -->
+    <section
+      class="relative bg-cover bg-center bg-no-repeat h-64 md:h-80 lg:h-96 xl:h-96 w-screen flex justify-center items-center text-white"
+      style="background-image: url('images/traffic.jpg')"
+    >
+      <div
+        class="absolute inset-0 bg-yellow-500 opacity-40"
+        aria-hidden="true"
+      ></div>
+      <div
+        class="py-8 md:py-16 lg:py-24 xl:py-24 text-black flex text-center flex-col px-6 items-center relative z-10"
+      >
+        <h1
+          class="text-2xl md:text-4xl lg:text-5xl xl:text-5xl font-semibold mb-2 md:mb-4"
+        >
+          Dryve for Business
+        </h1>
+        <p class="md:text-base lg:text-lg xl:text-2xl font-normal mb-4">
+          A platform to manage global rides and meals and local deliveries for
+          your business.
+        </p>
+        <button
+          class="bg-black text-white text-sm md:text-base lg:text-lg xl:text-lg px-8 md:px-12 py-2 md:py-3 mt-6 md:mt-10 rounded-full"
+        >
+          Get Started now
+        </button>
+      </div>
+    </section>
+    <!-- Discount section -->
+    <section class="bg-gray-100">
+      <div class="flex flex-col-reverse md:flex-row p-6 md:p-32">
+        <div class="flex-1 mt-10 md:mt-0">
+          <h1 class="text-3xl md:text-5xl font-semibold mb-4">
+            Unlock savings of up to 20% with Dryve Along
+          </h1>
+          <p class="text-left font-light">
+            Experience all the convenience and benefits of Dryve Along at a more
+            budget-friendly price with Dryve Along. Save up to 20% by sharing
+            your ride with a driver traveling along your route. Certain terms
+            and conditions apply. Currently accessible in select Nigerian
+            cities.
+          </p>
+          <button
+            class="bg-black text-white text-sm px-6 md:px-10 py-4 mt-10 border rounded-full"
+          >
+            Learn more about Dryve Along
+          </button>
+        </div>
+        <div class="flex-1">
+          <img
+            src="images/Unlock.png"
+            alt="Unlock Image"
+            class="w-full h-auto md:max-w-md md:max-h-full mx-auto"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Ride section -->
+    <section class="m-8 md:mx-16 lg:mx-28 xl:mx-36">
+      <h1 class="text-center text-4xl font-semibold mb-8">Ride with Dryve</h1>
+      <div class="flex flex-col md:flex-row space-y-8 md:space-y-0">
+        <div class="flex space-x-4 md:space-x-10 mb-8">
+          <div class="flex-shrink-0">
+            <img
+              src="images/BookForLater.png"
+              alt=""
+              class="w-24 h-24 md:w-44 md:h-44"
+            />
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-3xl font-semibold pt-4 md:pt-9">
+              Dryve Now Pay Later
+            </h3>
+            <p class="pt-2">Book a ride in advance and even pay later</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row space-y-8 md:space-y-0">
+        <div class="flex space-x-4 md:space-x-10 mb-8">
+          <div class="flex-shrink-0">
+            <img src="images/Unlock.png" alt="" class="w-44 h-44" />
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-3xl font-semibold pt-9">Dryve Along</h3>
+            <p class="pt-2 font-normal">
+              Share the ride with up to one co-rider at a time
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row space-y-8 md:space-y-0">
+        <div class="flex space-x-4 md:space-x-10 mb-8">
+          <div class="flex-shrink-0">
+            <img src="images/Delivery.png" alt="" class="w-44 h-44" />
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-3xl font-semibold pt-9">Dryve Dispatch</h3>
+            <p class="pt-2 font-normal">
+              Bike dispatch to help you get around your city
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row space-y-8 md:space-y-0">
+        <div class="flex space-x-4 md:space-x-10 mb-8">
+          <div class="flex-shrink-0">
+            <img src="images/Keke.png" alt="" class="w-44 h-44" />
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-3xl font-semibold pt-9">Dryve KeKe</h3>
+            <p class="pt-2 font-normal">
+              Pick a KeKe. See the price. Get moving
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row space-y-8 md:space-y-0">
+        <div class="flex space-x-4 md:space-x-10 mb-8">
+          <div class="flex-shrink-0">
+            <img src="images/DryveAlong.png" alt="" class="w-44 h-44" />
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-3xl font-semibold pt-9">Dryve Between Cities</h3>
+            <p class="pt-2 font-normal">Go city to city</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="waitingListSection">
+      <h1 class="text-4xl text-center font-semibold mb-8">
+        Join our waiting list
+      </h1>
+      <div class="max-w-3xl mx-auto p-8 rounded-md border border-black">
+        <div class="mb-4">
+          <label for="name" class="block text-md font-normal text-black"
+            >Name</label
+          >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="mt-1 p-2 w-full border border-black rounded-md"
+          />
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-md font-normal text-black"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="mt-1 p-2 w-full border border-black rounded-md"
+          />
+        </div>
+        <div class="mb-4">
+          <label for="phone number" class="block text-md font-normal text-black"
+            >Phone number</label
+          >
+          <input
+            type="phone number"
+            id="phone number"
+            name="phone number"
+            class="mt-1 p-2 w-full border border-black rounded-md"
+          />
+        </div>
+        <div class="mb-4">
+          <label for="role" class="block text-md font-normal text-black"
+            >Select Role</label
+          >
+          <select
+            id="role"
+            name="role"
+            class="mt-1 p-2 w-full border border-black rounded-md"
+          >
+            <option value="rider">Rider</option>
+            <option value="driver">Driver</option>
+          </select>
+        </div>
+        <button
+          class="bg-black text-white mt-2 md:ml-72 sm:ml-72 px-10 py-2 rounded-full"
+        >
+          Send
+        </button>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="bg-black text-white py-8 mt-16">
+      <h3 class="text-center mb-4 font-semibold">
+        Dryve is coming to your doorstep soon
+      </h3>
+      <div class="m-12">
+        <p class="text-center">You can Reach us via our socials</p>
+        <div class="flex justify-center">
+          <a href="#" class="mx-2 text-2xl"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="mx-2 text-2xl"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="mx-2 text-2xl"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="mx-2 text-2xl"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="mx-2 text-2xl"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="container mx-auto text-center mt-4 border-t border-white">
+        <p class="mt-2">Copyright &copy; 2023 DRYVE</p>
+      </div>
+    </footer>
+    <style>
+      @media (max-width: 768px) {
+        footer {
+          padding-top: 6rem;
+        }
+        .m-12 {
+          margin: 8px;
+        }
+      }
+      @media (max-width: 480px) {
+        .text-2xl {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+    <script src="script.js"></script>
+  </body>
+</html>
